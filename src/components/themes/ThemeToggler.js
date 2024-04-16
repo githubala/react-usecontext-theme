@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const ThemeToggler = () => {
   const [currentTheme, setTheme] = useState('light');
-  useEffect(() => {}, [currentTheme]);
+  useEffect(() => {
+    Object.keys(theme).forEach({
+      
+    });
+  }, [currentTheme]);
 
   function onToggle() {
     setTheme(currentTheme == 'light' ? 'dark' : 'light');
