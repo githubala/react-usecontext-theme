@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import {lightTheme, darkTheme} from './Theme.constant.js'
 
 const ThemeToggler = () => {
-  const [currentTheme, setTheme] = useState('light');
+  const [currentTheme, setTheme] = useState('light');  
   useEffect(() => {
-    Object.keys(theme).forEach({
-      
+    const theme = currentTheme === 'light' ? lightTheme : darkTheme;
+    Object.keys(theme).forEach((key)=>{
+      const value = theme[key]
+      document.documentElement.style.setProperty(key, value)
     });
   }, [currentTheme]);
 
