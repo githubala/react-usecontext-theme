@@ -1,11 +1,15 @@
 import React from "react";
 import "./style.css";
+import { ThemeProvider } from './ThemeContext';
+import ThemeToggler from './ThemeToggler';
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <ThemeProvider>
+      <div>
+        <h1>React Theme Example</h1>
+        <ThemeToggler />
+      </div>
+    </ThemeProvider>
   );
 }
