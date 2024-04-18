@@ -3,21 +3,12 @@ import React, { useState, useEffect, useContext } from 'react';
 import { ThemeContext } from './ThemeContext.js';
 
 const ThemeToggler = () => {
-  //const [currentTheme, setTheme] = useState('light');  
-  // useEffect(() => {
-  //   const themes = currentTheme === 'light' ? lightTheme : darkTheme;
-  //   Object.keys(themes).forEach((key)=>{
-  //     const value = themes[key]
-  //     document.documentElement.style.setProperty(key, value)
-  //   });
-  // }, [currentTheme]);
 
   const {currentTheme, toggleTheme} = useContext(ThemeContext);
-
-  
+    
   return <div>
   <button onClick={toggleTheme}>Toggle Theme</button>
-  <p>Current Theme: {theme}</p>
+  <p>Current Theme: {currentTheme}</p>
 </div>;
 };
 
